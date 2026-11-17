@@ -1,0 +1,19 @@
+input = "synthetic.csv"
+output = "tuned_results"
+plots = true
+
+[[models]]
+id = "SVR_tuned"
+family = "svr"
+cv_folds = 3
+[models.search_grid]
+C = [1.0, 10.0]
+epsilon = [0.03, 0.1]
+
+[[models]]
+id = "DT_tuned"
+family = "dt"
+cv_folds = 3
+[models.search_grid]
+max_depth = [3, 6]
+min_samples_leaf = [2, 5]

@@ -1,0 +1,61 @@
+# Paths are relative to this configuration file, not the working directory.
+input = "synthetic.csv"
+output = "demo_results"
+seed = 42
+test_fraction = 0.2
+split = "random"
+plots = true
+interactive = false
+
+[eda]
+enabled = true
+moisture_threshold = 1.0  # synthetic.csv has no below-threshold observations
+n_clusters = 3
+contamination = 0.02
+plots = true
+
+[validation]
+on_invalid = "error"
+min_moisture = 1.0
+material_group = "synthetic_sand"
+
+[grid]
+shape = [41, 41]
+domain = "hull"
+
+[pci]
+weights = [0.4, 0.4, 0.2]
+bounds = [0.2, 5.0]
+directions = [1, 1]
+tolerance = 0.0
+
+[pci.weight_variants]
+roughness_emphasis = [0.25, 0.55, 0.2]
+
+[[models]]
+id = "SVR"
+family = "svr"
+[models.params]
+C = 10.0
+epsilon = 0.05
+
+[[models]]
+id = "RF"
+family = "rf"
+[models.params]
+n_estimators = 100
+min_samples_leaf = 2
+
+[[models]]
+id = "DT"
+family = "dt"
+[models.params]
+max_depth = 6
+min_samples_leaf = 3
+
+[[models]]
+id = "KNN"
+family = "knn"
+[models.params]
+n_neighbors = 7
+weights = "distance"

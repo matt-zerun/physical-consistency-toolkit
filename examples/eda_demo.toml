@@ -1,0 +1,17 @@
+# EDA-only demonstration, independently generated synthetic dry/moist records.
+# Run: python -m physical_consistency eda --config examples/eda_demo.toml
+input = "synthetic_eda.csv"
+output = "eda_demo_results"
+seed = 42
+plots = true
+
+[validation]
+on_invalid = "error"
+material_group = "synthetic_demo_material"
+
+[eda]
+enabled = true
+moisture_threshold = 1.0
+n_clusters = 3
+contamination = 0.02
+plots = true

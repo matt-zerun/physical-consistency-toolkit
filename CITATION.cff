@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "Cite this software and the methodological article. Software DOI not yet assigned."
+title: "Physical Consistency Toolkit"
+type: software
+authors:
+  - family-names: "Żeruń"
+    given-names: "Mateusz"
+    affiliation: "Polish Geological Institute - National Research Institute (scientific affiliation only)"
+version: "0.2.0"
+date-released: "2026-11-16"
+license: MIT
+abstract: "Exploratory analysis, thermal-conductivity regression and post-hoc physical-consistency diagnostics. Synthetic examples only."
+keywords:
+  - physical consistency
+  - thermal conductivity
+  - response surfaces
+  - machine learning
+references:
+  - type: article
+    title: "Machine-Learning-Based Parameterisation of Soil Thermal Conductivity for Shallow Geothermal and Ground Heat Exchanger Modelling"
+    authors:
+      - family-names: "Żeruń"
+        given-names: "Mateusz"
+      - family-names: "Jagoda"
+        given-names: "Ewa"
+      - family-names: "Majer"
+        given-names: "Edyta"
+    year: 2026
+    journal: "Energies"
+    volume: 19
+    issue: 8
+    start: "1827"
+    doi: "10.3390/en19081827"
